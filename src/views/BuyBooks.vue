@@ -13,7 +13,8 @@
       <div class="whole" v-for="(bookTwo, index) in filteredList" :key="bookTwo.id">
         <p>
           <label class="row">
-            <div class="book">
+             <div class="bookcloser"> 
+               <div class="book">
               <input
                 type="text"
                 v-if="bookTwo === editingBook"
@@ -32,7 +33,8 @@
                 <div class="italic">
                   {{ bookTwo.author }}
                 </div>
-              </div>
+              </div></div>
+           
               <div class="i">
                 <a
                   v-on:click="completeBook($event, bookTwo)"
@@ -200,6 +202,7 @@ span {
   display: block;
   margin: 20px 0px;
   width: 70%;
+  height:60px;
   padding: 50px;
   box-shadow: 5px 10px 10px #888888;
   border-radius: 5px;
@@ -286,9 +289,10 @@ h4 {
 .i {
   float: right;
   text-align: center;
-  margin-top: -14.5%;
-  border-left: 4px ridge #ba7575;
-  padding: 20px;
+  margin-top:-170px;
+  margin-right:300px;
+  border-left: 2px ridge #ba7575;
+  padding:20px 20px;
 }
 
 .i:hover {
@@ -309,10 +313,11 @@ h4 {
   border: 0.5px solid #b9bbb6;
   border-radius: 5px;
   width: 50%;
-  padding: 10px;
+  padding:10px;
   margin: 0 auto;
   text-align: left;
 }
+
 
 .completed {
   text-decoration: line-through;
@@ -329,4 +334,6 @@ strong {
   font-weight: 700;
   padding-right: 10px;
 }
+
+
 </style>

@@ -13,8 +13,10 @@
       <div class="whole" v-for="(book, index) in filteredList" :key="book.id">
         <p>
           <label class="row">
-            <div class="book">
-              <input
+            <div class="bookcloser">
+              <div class="book"> 
+                
+                <input
                 type="text"
                 v-if="book === editingBook"
                 v-auto-focus
@@ -22,9 +24,9 @@
                 @keyup.enter="endEditing(book)"
                 @blur="endEditing(book)"
                 v-model="book.title" 
-              />
+              />   
               <div v-bind:class="{ completed: book.completed }">
-                <span>
+                <span>           
                   <strong v-if="book !== editingBook">{{
                     book.title
                   }}</strong></span
@@ -32,8 +34,8 @@
                 <div class="italic">
                   {{ book.author }}
                 </div>
-              </div>
-              <div class="i">
+            </div></div>
+            <div class="i">
                 <a
                   v-on:click="completeBook($event, book)"
                   v-bind:id="'book-' + index"
@@ -41,7 +43,6 @@
                 >
                   <i class="material-icons">done</i>
                 </a>
-
                 <a @click="editBook(book)">
                   <i class="material-icons">edit</i>
                 </a>
@@ -49,7 +50,8 @@
                   <i class="material-icons">delete</i>
                 </a>
               </div>
-            </div>
+                  
+              </div>
           </label>
         </p>
       </div>
@@ -200,6 +202,7 @@ span {
   display: block;
   margin: 20px 0px;
   width: 70%;
+  height:60px;
   padding: 50px;
   box-shadow: 5px 10px 10px #888888;
   border-radius: 5px;
@@ -286,9 +289,10 @@ h4 {
 .i {
   float: right;
   text-align: center;
-  margin-top: -13.5%;
-  border-left: 4px ridge #ba7575;
-  padding: 20px;
+  margin-top:-170px;
+  margin-right:300px;
+  border-left: 2px ridge #ba7575;
+  padding:20px 20px;
 }
 
 .i:hover {
@@ -309,10 +313,11 @@ h4 {
   border: 0.5px solid #b9bbb6;
   border-radius: 5px;
   width: 50%;
-  padding: 10px;
+  padding:10px;
   margin: 0 auto;
   text-align: left;
 }
+
 
 .completed {
   text-decoration: line-through;
@@ -329,4 +334,6 @@ strong {
   font-weight: 700;
   padding-right: 10px;
 }
+
+
 </style>
