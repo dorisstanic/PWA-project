@@ -285,7 +285,7 @@ h4 {
 .i {
   float: right;
   text-align: center;
-  margin-top: -13.5%;
+  margin-top: -14%;
   border-left: 3px ridge #ba7575;
   padding: 20px;
 }
