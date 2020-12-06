@@ -283,11 +283,10 @@ h4 {
   transform: scale(1.5);
 }
 .i {
-  display:block;
   float: right;
   text-align: center;
-  margin-top: -13%;
-  border-left: 4px ridge #ba7575;
+  margin-top: -13.5%;
+  border-left: 3px ridge #ba7575;
   padding: 20px;
 }
 
