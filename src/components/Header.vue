@@ -4,9 +4,13 @@
       <template slot="end">
         <b-navbar-item tag="div">
           <div class="buttons">
-            <b-button type="is-dark">Sign up</b-button>
+            <router-link class="btn btn-outline-primary" to="/signup"
+              ><b-button type="is-dark">Sign up</b-button></router-link
+            >
 
-            <b-button type="is-light">Log in</b-button>
+            <router-link class="nav-link pr-3" to="/login"
+              ><b-button type="is-light">Log in</b-button></router-link
+            >
           </div>
         </b-navbar-item>
       </template>
